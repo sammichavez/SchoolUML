@@ -1,15 +1,11 @@
 public class School {
-
     private String name;
-    private Section[] ss = new Section[100];
+    private Section[] sections = new Section[200];
+    private int sectionCount;
 
-    public School(String name, Section[] ss, int sCount) {
+    public School(String name){
         this.name = name;
-        this.ss = ss;
-        this.sCount = sCount;
     }
-
-    private int sCount = 0;
 
     public String getName() {
         return name;
@@ -19,12 +15,19 @@ public class School {
         this.name = name;
     }
 
-    public void addSection(Section s) {
-        ss[sCount] = s;
-        sCount ++;
+    public Section[] getSections() {
+        return sections;
     }
 
-    public Section[] getSs() {
-        return ss;
+    public void setSections(Section[] sections) {
+        this.sections = sections;
+    }
+
+    public int getSectionCount() {
+        return sectionCount;
+    }
+
+    public void setSectionCount(int sectionCount) {
+        this.sectionCount = sectionCount;
     }
 }
